@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "dyno-example"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-15t79vurwqc4r"
+s3_prefix = "dyno-example"
+region = "eu-west-2"
+profile = "dev"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "RepositoryOwner=\"dmallonkx\" RepositoryName=\"aws_cicd_test\" RepositoryBranch=\"master\""
