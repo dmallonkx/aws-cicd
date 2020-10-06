@@ -13,9 +13,6 @@ phases:
       # Remove all dependencies not relevant for production
       - npm prune --production
       - cd ..
-  build:
-    commands:
-      # Create and upload a deployment package
       - aws cloudformation package --template-file template.yml --s3-bucket $S3_BUCKET --output-template sam-template-output.yaml
 
 artifacts:
