@@ -9,4 +9,4 @@ region = "eu-west-2"
 profile = "dev"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "RepositoryOwner=\"dmallonkx\" RepositoryName=\"aws_cicd_test\" RepositoryBranch=\"master\""
+parameter_overrides = "RepositoryOwner=\"dmallonkx\" RepositoryName=\"aws-cicd\" RepositoryBranch=\"master\""
