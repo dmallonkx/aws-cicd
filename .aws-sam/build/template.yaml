@@ -131,7 +131,7 @@ Resources:
             Version: 1
           Configuration:
             ActionMode: CHANGE_SET_REPLACE
-            Capabilities: CAPABILITY_NAMED_IAM
+            Capabilities: CAPABILITY_IAM
             TemplatePath: BuildOutput::sam-template-output.yaml
             ParameterOverrides:
               Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}"
@@ -144,7 +144,6 @@ Resources:
               Fn::GetAtt: CloudFormationServiceRole.Arn
           InputArtifacts:
           - Name: BuildOutput
-          - Name: SourceOutput
           RunOrder: 1
         - Name: Execute
           ActionTypeId:
