@@ -157,8 +157,8 @@ Resources:
                 StackName:
                   #Fn::Sub: ${RepositoryName}-dev
                   Fn::Sub: dyno-example
-                RoleArn:
-                  Fn::GetAtt: CloudFormationServiceRole.Arn
+              #  RoleArn:
+                  #Fn::GetAtt: CloudFormationServiceRole.Arn
               InputArtifacts:
                 - Name: BuildOutput
               RunOrder: 1
