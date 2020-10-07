@@ -36,7 +36,7 @@ Resources:
   BoardHttpApi:
     Type: AWS::Serverless::HttpApi
     Properties:
-      StageName: dev
+      StageName: Test
       CorsConfiguration: true
   PostMessageFunctionDonal:
     Type: AWS::Serverless::Function
