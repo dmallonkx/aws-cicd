@@ -1,0 +1,15 @@
+{
+  "Parameters" : {
+    "S3BucketName" : "s3",
+    "StageName": "test"
+  },
+  "StackPolicy" : {
+    "Statement" : [
+      {
+        "Effect" : "Allow",
+        "Principal": "*",
+        "Resource" : "*"
+      }
+    ]
+  }
+}
