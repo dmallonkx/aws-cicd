@@ -93,7 +93,7 @@ Resources:
     Type: AWS::CodePipeline::Pipeline
     Properties:
       Name:
-        Fn::Sub: ${RepositoryName}-pipeline
+        Fn::Sub: ${RepositoryName}-pipeline-2
       Stages:
         - Name: Source
           Actions:
@@ -140,13 +140,13 @@ Resources:
                 ActionMode: CHANGE_SET_REPLACE
                 Capabilities: CAPABILITY_IAM
                 TemplatePath: BuildOutput::sam-template-output.yaml
-                # TemplateConfiguration: SourceOutput::config-dev.json
-                # ParameterOverrides:
-                #  Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}" }'
+                TemplateConfiguration: SourceOutput::config-dev.json
+                ParameterOverrides:
+                  Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}" }'
                 ChangeSetName:
                   Fn::Sub: ${RepositoryName}-changeset 
                 StackName:
-                  # Fn::Sub: ${RepositoryName}-dev
+                  #Fn::Sub: ${RepositoryName}-dev
                   Fn::Sub: dyno-example
                 RoleArn:
                   Fn::GetAtt: CloudFormationServiceRole.Arn
