@@ -144,7 +144,8 @@ Resources:
                 ChangeSetName:
                   Fn::Sub: ${RepositoryName}-changeset
                 StackName:
-                  Fn::Sub: ${RepositoryName}-dev
+                  #Fn::Sub: ${RepositoryName}-dev
+                  Fn::Sub: dyno-example
                 RoleArn:
                   Fn::GetAtt: CloudFormationServiceRole.Arn
               InputArtifacts:
@@ -161,7 +162,7 @@ Resources:
                 ChangeSetName:
                   Fn::Sub: ${RepositoryName}-changeset
                 StackName:
-                  Fn::Sub: ${RepositoryName}-dev
+                  Fn::Sub: dyno-example
               RunOrder: 2
       RoleArn:
         Fn::GetAtt:  CodePipelineServiceRole.Arn
