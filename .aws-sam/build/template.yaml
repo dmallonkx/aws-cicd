@@ -95,7 +95,7 @@ Resources:
               Ref: RepositoryName
             Branch:
               Ref: RepositoryBranch
-            OAuthToken: '{{resolve:ssm:/github/personal_access_token:1}}'
+            OAuthToken: 979960d822c52ad37feeba48d70c64afd0249528
           OutputArtifacts:
           - Name: SourceOutput
       - Name: Build
