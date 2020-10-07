@@ -15,6 +15,14 @@ Parameters:
     Type: String
     Description: The name of the branch.
     Default: master
+  StageName:
+    Type: String
+    Description: StageName
+    Default: dev
+  S3BucketName:
+    Type: String
+    Description: s3 bucket name
+    Default: ${ArtifactsBucket}
 Resources:
   BoardMessagesTableDonal:
     Type: AWS::DynamoDB::Table
