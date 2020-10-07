@@ -140,7 +140,7 @@ Resources:
                 ActionMode: CHANGE_SET_REPLACE
                 Capabilities: CAPABILITY_IAM
                 TemplatePath: BuildOutput::sam-template-output.yaml
-                #TemplateConfiguration: BuildOutput::config-dev.json
+                TemplateConfiguration: BuildOutput::config-dev.json
                 ParameterOverrides:
                   Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}" }'
                 ChangeSetName:
