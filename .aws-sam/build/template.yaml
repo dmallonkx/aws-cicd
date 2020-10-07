@@ -78,7 +78,7 @@ Resources:
     Type: AWS::CodePipeline::Pipeline
     Properties:
       Name:
-        Fn::Sub: ${RepositoryName}-pipeline
+        Fn::Sub: ${RepositoryName}-pipeline-2
       Stages:
       - Name: Source
         Actions:
