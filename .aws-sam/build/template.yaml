@@ -6,9 +6,11 @@ Parameters:
   RepositoryOwner:
     Type: String
     Description: The owner of the GitHub repository.
+    Default: dmallonkx
   RepositoryName:
     Type: String
     Description: The name of the GitHub repository.
+    Default: aws-cicd
   RepositoryBranch:
     Type: String
     Description: The name of the branch.
