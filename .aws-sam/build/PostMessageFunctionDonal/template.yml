@@ -139,7 +139,7 @@ Resources:
               Configuration:
                 ActionMode: CHANGE_SET_REPLACE
                 Capabilities: CAPABILITY_IAM
-                TemplatePath: BuildOutput::sam-template-output.yaml
+                TemplatePath: BuildOutput::sam-template-output.yaml 
                 ChangeSetName:
                   Fn::Sub: ${RepositoryName}-changeset 
                 StackName:
