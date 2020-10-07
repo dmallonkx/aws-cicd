@@ -140,7 +140,7 @@ Resources:
                 ActionMode: CHANGE_SET_REPLACE
                 Capabilities: CAPABILITY_IAM
                 TemplatePath: BuildOutput::sam-template-output.yaml
-                TemplateConfiguration: BuildOutput::config-dev.json
+                TemplateConfiguration: SourceOutput::config-dev.json
                 ParameterOverrides:
                   Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}" }'
                 ChangeSetName:
@@ -152,6 +152,7 @@ Resources:
                   Fn::GetAtt: CloudFormationServiceRole.Arn
               InputArtifacts:
                 - Name: BuildOutput
+                - Name: SourceOutput
               RunOrder: 1
             - Name: Execute
               ActionTypeId:
@@ -166,6 +167,8 @@ Resources:
                 StackName:
                   Fn::Sub: dyno-example
               RunOrder: 2
+
+
       RoleArn:
         Fn::GetAtt:  CodePipelineServiceRole.Arn
       ArtifactStore:
