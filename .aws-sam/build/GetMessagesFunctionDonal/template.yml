@@ -52,7 +52,7 @@ Resources:
   BoardHttpApi:
     Type: AWS::Serverless::HttpApi
     Properties:
-      StageName: Test
+      StageName: dev
       CorsConfiguration: True
 
   PostMessageFunctionDonal:
@@ -142,7 +142,7 @@ Resources:
                 TemplatePath: BuildOutput::sam-template-output.yaml
                 TemplateConfiguration: BuildOutput::config-dev.json
                 ParameterOverrides:
-                  Fn::Sub: '{ "StageName": "test", "S3BucketName": "${ArtifactsBucket}" }'
+                  Fn::Sub: '{ "StageName": "dev", "S3BucketName": "${ArtifactsBucket}" }'
                 ChangeSetName:
                   Fn::Sub: ${RepositoryName}-changeset
                 StackName:
