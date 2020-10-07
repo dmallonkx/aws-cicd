@@ -1,0 +1,6 @@
+{
+"Parameters" : {
+"StageName" : "dev",
+"S3BucketName" : "s3"
+}
+}
