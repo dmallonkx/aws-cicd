@@ -28,7 +28,7 @@ exports.handler = async (event) => {
   } catch (err) {
     return {
        statusCode: 500,
-       body: 'Something went badly wrong :(',
+       body: 'Something went very badly wrong :(',
     }
   }
 };
