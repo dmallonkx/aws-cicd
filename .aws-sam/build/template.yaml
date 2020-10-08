@@ -297,6 +297,7 @@ Resources:
           - sts:AssumeRole
       ManagedPolicyArns:
       - arn:aws:iam::aws:policy/AWSLambdaExecute
+      - arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess
       Policies:
       - PolicyName: CloudFormationTrustPolicy
         PolicyDocument:
