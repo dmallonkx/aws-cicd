@@ -23,12 +23,12 @@ exports.handler = async (event) => {
     }).promise();
     return {
        statusCode: 200,
-       body: 'Message posted on board!',
+       body: 'Message was posted on board!',
     }
   } catch (err) {
     return {
        statusCode: 500,
-       body: 'Something went very badly wrong :(',
+       body: 'Something went badly wrong :(',
     }
   }
 };
